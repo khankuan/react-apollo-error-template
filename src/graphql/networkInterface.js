@@ -1,5 +1,5 @@
-import { graphql, print } from 'graphql';
-import { schema } from './schema';
+import { graphql, print } from "graphql";
+import { schema } from "./schema";
 
 export const networkInterface = {
   query({ query, variables, operationName }) {
@@ -10,13 +10,13 @@ export const networkInterface = {
         null,
         null,
         variables,
-        operationName,
+        operationName
       );
     });
-  },
+  }
 };
 
-function delay (ms) {
+function delay(ms) {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve();
