@@ -37,7 +37,7 @@ class ComponentOne extends Component {
         {people &&
           people.map(p =>
             <p key={p.id}>
-              {p.name}
+              {p.name.firstName}
             </p>
           )}
       </div>
@@ -55,7 +55,9 @@ export default graphql(
 
     fragment ComponentOneName on Person {
       id
-      name
+      name {
+        firstName
+      }
       email
     }
   `,
